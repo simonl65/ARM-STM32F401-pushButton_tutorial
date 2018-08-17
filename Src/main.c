@@ -117,12 +117,22 @@ int main(void)
 */
 		if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) && tempVar)
 		{ // Rising edge detected
-			HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-			tempVar = false;
+			// Now ensure we debounce:
+			HAL_Delay(5);
+			if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
+			{
+				HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+				tempVar = false;
+			}
 		}
 		else if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET)
 		{ // Falling edge detected
-			tempVar = true;
+			// Ensure we debounce:
+			HAL_Delay(5);
+			if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET)
+			{
+				tempVar = true;
+			}
 		}
 
   }
