@@ -120,7 +120,7 @@ int main(void)
 			// Now ensure we debounce:
 			HAL_Delay(5);
 			if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
-			{
+			{	// Button still high
 				HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 				tempVar = false;
 			}
@@ -130,7 +130,7 @@ int main(void)
 			// Ensure we debounce:
 			HAL_Delay(5);
 			if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET)
-			{
+			{	// Button still low
 				tempVar = true;
 			}
 		}
