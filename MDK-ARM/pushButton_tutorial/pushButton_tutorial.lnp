@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp
+"pushbutton_tutorial\startup_stm32f401xe.o"
+"pushbutton_tutorial\main.o"
+"pushbutton_tutorial\stm32f4xx_it.o"
+"pushbutton_tutorial\stm32f4xx_hal_msp.o"
+"pushbutton_tutorial\stm32f4xx_hal_tim.o"
+"pushbutton_tutorial\stm32f4xx_hal_tim_ex.o"
+"pushbutton_tutorial\stm32f4xx_hal_rcc.o"
+"pushbutton_tutorial\stm32f4xx_hal_rcc_ex.o"
+"pushbutton_tutorial\stm32f4xx_hal_flash.o"
+"pushbutton_tutorial\stm32f4xx_hal_flash_ex.o"
+"pushbutton_tutorial\stm32f4xx_hal_flash_ramfunc.o"
+"pushbutton_tutorial\stm32f4xx_hal_gpio.o"
+"pushbutton_tutorial\stm32f4xx_hal_dma_ex.o"
+"pushbutton_tutorial\stm32f4xx_hal_dma.o"
+"pushbutton_tutorial\stm32f4xx_hal_pwr.o"
+"pushbutton_tutorial\stm32f4xx_hal_pwr_ex.o"
+"pushbutton_tutorial\stm32f4xx_hal_cortex.o"
+"pushbutton_tutorial\stm32f4xx_hal.o"
+"pushbutton_tutorial\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "pushButton_tutorial\pushButton_tutorial.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "pushButton_tutorial.map" -o pushButton_tutorial\pushButton_tutorial.axf
