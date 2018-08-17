@@ -27,3 +27,4 @@ pushbutton_tutorial\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_fl
 pushbutton_tutorial\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 pushbutton_tutorial\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 pushbutton_tutorial\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+pushbutton_tutorial\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
